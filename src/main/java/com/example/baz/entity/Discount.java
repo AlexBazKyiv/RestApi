@@ -10,11 +10,14 @@ public class Discount {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @JoinColumn(name = "Discount_Product", nullable = true)
+    @JoinColumn(name = "Discount_Product", nullable = false)
     private String discountProduct;
 
-    @Column(name = "discount", nullable = true)
+    @Column(name = "discount", nullable = false)
     private double discount;
+
+    @Column(name = "id_product", nullable = true)
+    private long idProduct;
 
     public Long getId() {
         return id;
@@ -38,5 +41,13 @@ public class Discount {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    public long getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(long idProduct) {
+        this.idProduct = idProduct;
     }
 }

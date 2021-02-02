@@ -2,6 +2,7 @@ package com.example.baz.init;
 
 import com.example.baz.entity.Discount;
 import com.example.baz.repository.DiscountRepository;
+import com.example.baz.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

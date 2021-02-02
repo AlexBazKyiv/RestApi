@@ -14,10 +14,18 @@ public class Product {
     private String Name;
 
     @Column(name = "Price", nullable = false)
-    private int Price;
+    private double Price;
 
     @Column(name = "Category", length = 60, nullable = false)
     private String Category;
+
+    public Product() {}
+
+    public Product(String name, double price, String category) {
+        Name = name;
+        Price = price;
+        Category = category;
+    }
 
     public Long getId() {
         return id;
@@ -35,11 +43,11 @@ public class Product {
         Name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         Price = price;
     }
 
@@ -49,5 +57,15 @@ public class Product {
 
     public void setCategory(String category) {
         Category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", Name='" + Name + '\'' +
+                ", Price=" + Price +
+                ", Category='" + Category + '\'' +
+                '}';
     }
 }

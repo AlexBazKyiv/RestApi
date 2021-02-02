@@ -5,8 +5,6 @@ public class CreateMoneyRequest {
     private double cash;
     private String name;
 
-    public CreateMoneyRequest() {}
-
     public CreateMoneyRequest(long id, double cash, String name) {
         this.id = id;
         this.cash = cash;

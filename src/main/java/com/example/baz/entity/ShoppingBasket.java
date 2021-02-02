@@ -4,13 +4,15 @@ import java.util.List;
 
 public class ShoppingBasket {
     private long clientId;
-    private double sumPay = 0.0;
-    private double discount;
+    private double sumPays ;
+    private double sumDiscounts;
+    private double cash;
 
-    public ShoppingBasket(long clientId, double discount, double sumPay) {
+    public ShoppingBasket(long clientId, double discount, double sumPay, double cash) {
         this.clientId = clientId;
-        this.discount = discount;
-
+        this.sumDiscounts = discount;
+        this.sumPays = sumPay;
+        this.cash = cash;
     }
 
     public long getClientId() {
@@ -21,16 +23,37 @@ public class ShoppingBasket {
         this.clientId = clientId;
     }
 
-    public double getSumPay() {
-        return sumPay;
+    public double getSumPays() {
+        return sumPays;
+    }
+
+    public void setSumPays(double sumPays) {
+        this.sumPays = sumPays;
+    }
+
+    public double getSumDiscounts() {
+        return sumDiscounts;
+    }
+
+    public void setSumDiscounts(double sumDiscounts) {
+        this.sumDiscounts = sumDiscounts;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
     }
 
     @Override
     public String toString() {
         return "ShoppingBasket{" +
                 "clientId=" + clientId +
-                ", sumPay=" + sumPay +
-                ", discount=" + discount +
+                ", sumPays=" + sumPays +
+                ", sumDiscounts=" + sumDiscounts +
+                ", cash=" + cash +
                 '}';
     }
 }
